@@ -4,7 +4,7 @@ import { IoIosInformationCircle } from "react-icons/io";
 
 const TitleContainer = ({ title, discription }) => {
   return (
-    <div className="w-screen aspect-video absolute  z-3000">
+    <div className="w-screen h-screen absolute  z-3000 ">
       <div className="pt-48 pl-16 w-1/3">
         <h1 className="text-3xl font-bold text-white pb-3">{title}</h1>
         <p className="text-sm text-white pt-2">{discription}</p>

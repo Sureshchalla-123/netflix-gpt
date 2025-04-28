@@ -19,7 +19,7 @@ const MainContainer = () => {
   const { original_title, overview } = mainMovie;
 
   return (
-    <div className="w-screen">
+    <div className="w-screen aspect-ratio absolute top-0 left-0">
       <TitleContainer title={original_title} discription={overview} />
       <VideoContainer id={id} />
     </div>

@@ -32,27 +32,17 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full top-0 left-0 ">
-      <div className="flex justify-between items-center px-8 pt-2">
-        <div>
-          <img className="w-[200px]" src={LOGO} alt="logo" />
-        </div>
-        <div className="flex  gap-3 rounded">
-          <div className="flex flex-col items-center">
-            <img
-              src={photoURL}
-              className="h-10 w-10 rounded-[50%] border-[5px] border-red-500"
-              alt="profile"
-            />
-            <p className="text-red-500 font-bold">{displayName}</p>
-          </div>
-          <button
-            onClick={handleSignOut}
-            className="text-white bg-red-700 px-4 py-2 rounded font-bold h-12"
-          >
-            Signout
-          </button>
-        </div>
+    <div className="w-full h-20  top-0 left-0 flex justify-between items-center px-8 pt-2 ">
+      <div>
+        <img className="w-[200px]" src={LOGO} alt="logo" />
+      </div>
+      <div className="flex  gap-3 rounded">
+        <button
+          onClick={handleSignOut}
+          className="text-white bg-red-700 px-4 py-2 rounded font-bold h-12"
+        >
+          Signout
+        </button>
       </div>
     </div>
   );
