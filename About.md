@@ -1,4 +1,6 @@
-# Project Name
+# netflix-gpt
+
+This project is like a clone of netflix and also adding the gpt features on top of it.
 
 This project is developed and maintained by a single developer with a strong focus on writing clean, scalable, and maintainable code.
 
@@ -8,9 +10,9 @@ The project follows a structured Git workflow for version control and uses the l
 
 ## 👨‍💻 Developer
 
-- Name: [Your Name]
+- Name: Suresh challa
 - Role: Full-stack Developer (Solo)
-- GitHub: [your-github-profile-link]
+- GitHub: [Sureshchalla-123](https://github.com/Sureshchalla-123)
 
 ---
 
@@ -20,6 +22,8 @@ The project follows a structured Git workflow for version control and uses the l
 - Apply a professional Git branch strategy even for solo development.
 - Practice modular and component-based architecture.
 - Focus on clean code, reusable components, and mobile-first design.
+- using the GPT APIs
+- Authentication
 
 ---
 
@@ -63,6 +67,56 @@ The project follows a structured Git workflow for version control and uses the l
 
 ---
 
+# 📚 GitHub Commands Cheat Sheet
+
+This section provides a list of essential Git commands used during the project development process.
+
+---
+
+## 🔰 Basic Setup
+
+| Action                | Command                            |
+| :-------------------- | :--------------------------------- |
+| Initialize Git        | `git init`                         |
+| Add remote repository | `git remote add origin <repo-url>` |
+| Clone repository      | `git clone <repo-url>`             |
+
+---
+
+## 📦 Working with Changes
+
+| Action              | Command                                   |
+| :------------------ | :---------------------------------------- |
+| Check status        | `git status`                              |
+| Add all changes     | `git add .`                               |
+| Add specific file   | `git add <file-name>`                     |
+| Commit changes      | `git commit -m "your-meaningful-message"` |
+| Push changes        | `git push origin <branch-name>`           |
+| Pull latest changes | `git pull origin <branch-name>`           |
+
+---
+
+## 🌿 Branch Management
+
+| Action               | Command                                  |
+| :------------------- | :--------------------------------------- |
+| Create new branch    | `git checkout -b <branch-name>`          |
+| Switch to a branch   | `git checkout <branch-name>`             |
+| List all branches    | `git branch`                             |
+| Delete local branch  | `git branch -d <branch-name>`            |
+| Delete remote branch | `git push origin --delete <branch-name>` |
+
+---
+
+## 🔀 Merging and Updating
+
+| Action                     | Command                         |
+| :------------------------- | :------------------------------ |
+| Merge branch into current  | `git merge <branch-name>`       |
+| Pull and merge from remote | `git pull origin <branch-name>` |
+
+---
+
 ## 📜 License
 
 This project is licensed for personal learning and portfolio purposes.
@@ -70,3 +124,7 @@ This project is licensed for personal learning and portfolio purposes.
 ---
 
 > _"Great projects are built one small commit at a time."_
+
+```
+
+```
