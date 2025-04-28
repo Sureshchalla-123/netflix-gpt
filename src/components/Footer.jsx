@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { IoToggle } from "react-icons/io5";
+import { LOGO } from "../utils/constants";
 
 const Footer = () => {
   return (
-    <div className="h-38 w-full bg-black text-white text-[16px] py-6 px-16 absolute bottom-0 shadow">
+    <div className="  w-full bg-black text-white text-[16px] py-6 px-16  shadow ">
       <ul className="flex flex-row justify-center items-center gap-4 flex-wrap w-[60%] m-auto ">
         <li className="d-inline-block">
           <div>
@@ -87,11 +88,7 @@ const Footer = () => {
         </li>
       </ul>
       <div className="flex justify-center items-center gap-2 mt-4">
-        <img
-          className="w-[100px]"
-          src="https://up.yimg.com/ib/th?id=OIP.cs6rsE5Ogsa4Hm_2Y6hiPwHaEK&pid=Api&rs=1&c=1&qlt=95&w=186&h=104"
-          alt="logo"
-        />
+        <img className="w-[100px]" src={LOGO} alt="logo" />
       </div>
       <div className="text-center">c 1990-2025 by IMDb.com, Inc</div>
     </div>

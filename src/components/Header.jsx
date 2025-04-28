@@ -12,12 +12,6 @@ const Header = () => {
 
   const user = useSelector((store) => store.user);
 
-  if (!user) {
-    return;
-  }
-
-  const { displayName, photoURL } = user;
-
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -32,18 +26,20 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full h-20  top-0 left-0 flex justify-between items-center px-8 pt-2 ">
+    <div className=" w-full h-20 relative top-0 left-0 flex justify-between items-center px-8 pt-2 z-10  ">
       <div>
         <img className="w-[200px]" src={LOGO} alt="logo" />
       </div>
-      <div className="flex  gap-3 rounded">
-        <button
-          onClick={handleSignOut}
-          className="text-white bg-red-700 px-4 py-2 rounded font-bold h-12"
-        >
-          Signout
-        </button>
-      </div>
+      {user && (
+        <div className="flex  gap-3 rounded">
+          <button
+            onClick={handleSignOut}
+            className="mb-2 text-black hover:text-white bg-white hover:bg-red-500 px-4 py-1 rounded-[30px] font-semi-bold  cursor-pointer"
+          >
+            Signout
+          </button>
+        </div>
+      )}
     </div>
   );
 };

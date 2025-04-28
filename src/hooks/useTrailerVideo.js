@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_KEY, API_OPTIONS } from "../utils/constants";
 import { addTrailerMovie } from "../utils/moviesSlice";
 import { useEffect } from "react";
@@ -6,10 +6,7 @@ import { useEffect } from "react";
 const useTrailerVideo = ({ id }) => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    getVideo();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  const trailerMovie = useSelector((store) => store.movies.trailerMovie);
 
   const getVideo = async () => {
     try {
@@ -27,6 +24,11 @@ const useTrailerVideo = ({ id }) => {
       console.log("Error while getting trailer video" + error);
     }
   };
+
+  useEffect(() => {
+    !trailerMovie && getVideo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
 };
 
 export default useTrailerVideo;
