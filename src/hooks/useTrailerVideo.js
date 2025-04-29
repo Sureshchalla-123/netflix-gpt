@@ -23,7 +23,7 @@ const useTrailerVideo = ({ id }) => {
         const filteredData = json.results.filter(
           (item) => item.type === "Trailer" && item.site === "YouTube"
         );
-        const trailerMovie = filteredData[1]?.key;
+        const trailerMovie = filteredData[0]?.key;
         dispatch(addTrailerMovie(trailerMovie));
       }
     } catch (error) {

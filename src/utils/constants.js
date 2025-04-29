@@ -14,16 +14,16 @@ export const API_OPTIONS = {
 };
 
 export const API_URL_NOWPLAYING =
-  "https://api.themoviedb.org/3/movie/now_playing";
+  "https://api.themoviedb.org/3/discover/movie?with_original_language=te&language=te-IN&sort_by=popularity.desc&page=1";
 
 export const API_URL_POPULAR =
-  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+  "https://api.themoviedb.org/3/discover/movie?with_original_language=te&sort_by=popularity.desc&page=1";
 
 export const API_URL_TOPRATED =
-  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+  "https://api.themoviedb.org/3/discover/movie?with_original_language=te&sort_by=vote_average.desc&vote_count.gte=100&page=1";
 
 export const API_URL_UPCOMING =
-  "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+  "https://api.themoviedb.org/3/discover/movie?with_original_language=te&sort_by=release_date.desc&primary_release_date.gte=2024-01-01&page=1";
 
 export const API_KEY = "49f751e05719ef47fc193939217a5a90";
 
