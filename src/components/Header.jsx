@@ -16,8 +16,6 @@ const Header = () => {
   const location = useLocation();
   const canUseBg = location.pathname.includes("/movie/");
 
-  console.log("location", canUseBg);
-
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
