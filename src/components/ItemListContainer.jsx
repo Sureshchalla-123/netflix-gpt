@@ -10,7 +10,7 @@ const ItemListContainer = () => {
   const upComingMovies = useSelector((store) => store.movies.upComingMovies);
 
   return (
-    <div className="absolute -mt-34">
+    <div className="w-full absolute -mt-34">
       <ItemList title="Now Playing Movies" data={nowPlayingMovies} />
       <ItemList title="Popular Movies" data={popularMovies} />
       <ItemList title="Top Rated Movies" data={topRatedMovies} />
