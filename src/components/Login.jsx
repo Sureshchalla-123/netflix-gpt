@@ -106,6 +106,8 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          const { uid, email, displayName, photoURL } = user;
+          dispatch(addUser({ uid, email, displayName, photoURL }));
           setLoading(false);
           navigate("/browse");
         })
