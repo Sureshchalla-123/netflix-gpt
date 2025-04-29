@@ -5,7 +5,7 @@ import usePopularMovies from "../hooks/usePopularMovies";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
-import useUpComingMovies from "../hooks/useUpcomingMovies";
+import useUpComingMovies from "../hooks/useUpComingMovies";
 
 const Browse = () => {
   useNowPlayingMovies();

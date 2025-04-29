@@ -7,7 +7,6 @@ const MovieDetials = () => {
     original_title,
     overview,
     poster_path,
-    id,
     release_date,
     title,
     vote_average,
@@ -22,14 +21,16 @@ const MovieDetials = () => {
           alt={title}
           className="w-1/3 rounded-lg mb-4"
         />
-        <h1 className="text-3xl font-bold mb-2">{original_title || title}</h1>
-        <p className="text-sm text-gray-400 mb-4">Released: {release_date}</p>
-        <p className="text-lg mb-4">{overview}</p>
-        <div className="flex items-center space-x-4">
-          <span className="text-yellow-500 font-bold">
-            Rating: {vote_average}
-          </span>
-          <span className="text-gray-400">({vote_count} votes)</span>
+        <div className="w-1/2 text-center">
+          <h1 className="text-3xl font-bold mb-2">{original_title || title}</h1>
+          <p className="text-sm text-gray-400 mb-4">Released: {release_date}</p>
+          <p className="text-lg mb-4">{overview}</p>
+          <div className="flex items-center space-x-4">
+            <span className="text-yellow-500 font-bold">
+              Rating: {vote_average}
+            </span>
+            <span className="text-gray-400">({vote_count} votes)</span>
+          </div>
         </div>
       </div>
     </div>
