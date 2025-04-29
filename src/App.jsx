@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
 import Browse from "./components/Browse";
+import MovieDetials from "./components/MovieDetials";
 // imported, if you need
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Login />} />
         <Route path="/browse" element={<Browse />} />
+        <Route path="/movie/:id" element={<MovieDetials />} />
         {/* Add more nested routes here like about, contact etc...*/}
       </Route>
     </Routes>

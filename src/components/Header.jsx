@@ -5,12 +5,18 @@ import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { LOGO } from "../utils/constants";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const user = useSelector((store) => store.user);
+
+  const location = useLocation();
+  const canUseBg = location.pathname.includes("/movie/");
+
+  console.log("location", canUseBg);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -26,7 +32,11 @@ const Header = () => {
   };
 
   return (
-    <div className=" w-full h-20 relative top-0 left-0 flex justify-between items-center px-8 pt-2 z-10  ">
+    <div
+      className={` w-full h-20 relative top-0 left-0 flex justify-between items-center px-8 pt-2 z-10 ${
+        canUseBg ? "bg-black" : "bg-transparent"
+      } `}
+    >
       <div>
         <img className="w-[200px]" src={LOGO} alt="logo" />
       </div>
