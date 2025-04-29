@@ -13,7 +13,11 @@ const Browse = () => {
   useTopRatedMovies();
   useUpComingMovies();
 
-  return (
+  const gptPage = useSelector((store) => store.gpt.gptPage);
+
+  return gptPage ? (
+    <GptSearch />
+  ) : (
     <>
       <MainContainer />
       <SecondaryContainer />
