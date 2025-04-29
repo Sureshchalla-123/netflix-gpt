@@ -14,7 +14,7 @@ const useNowPlayingMovies = () => {
     try {
       const data = await fetch(API_URL_TOPRATED, API_OPTIONS);
       const json = await data.json();
-      console.log("popular movies", json.results);
+
       dispatch(topRatedMovies(json.results)); // Dispatch action to store the movies
     } catch (error) {
       console.error("Failed to fetch now playing movies:", error);

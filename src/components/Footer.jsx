@@ -6,7 +6,7 @@ import { LOGO } from "../utils/constants";
 
 const Footer = () => {
   return (
-    <div className="  w-full bg-black text-white text-[16px] py-6 px-16  shadow ">
+    <div className="w-full bg-black text-white text-[16px] py-6 px-16  shaadow">
       <ul className="flex flex-row justify-center items-center gap-4 flex-wrap w-[60%] m-auto ">
         <li className="d-inline-block">
           <div>

@@ -9,17 +9,23 @@ const useTrailerVideo = ({ id }) => {
   const trailerMovie = useSelector((store) => store.movies.trailerMovie);
 
   const getVideo = async () => {
+    if (!id) {
+      return;
+    }
+
     try {
       const response = await fetch(
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
         API_OPTIONS
       );
-      const json = await response.json();
-      const filteredData = json.results.filter(
-        (item) => item.type === "Trailer" && item.site === "YouTube"
-      );
-      const trailerMovie = filteredData[1]?.key;
-      dispatch(addTrailerMovie(trailerMovie));
+      if (response.ok) {
+        const json = await response.json();
+        const filteredData = json.results.filter(
+          (item) => item.type === "Trailer" && item.site === "YouTube"
+        );
+        const trailerMovie = filteredData[1]?.key;
+        dispatch(addTrailerMovie(trailerMovie));
+      }
     } catch (error) {
       console.log("Error while getting trailer video" + error);
     }

@@ -124,7 +124,7 @@ const Login = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-blac/20 h-screen"></div>
         <form
           onSubmit={handleSubmit}
-          className="relative w-4/12 flex flex-col mx-auto gap-8 bg-black opacity-80 text-white p-12 rounded-lg min-w-[300px]"
+          className=" w-4/12 flex flex-col mx-auto gap-8 bg-black opacity-80 text-white p-12 rounded-lg min-w-[300px]"
         >
           <h1 className="font-bold text-2xl">
             {isLogin ? "Login" : "Sign up"}
